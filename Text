@@ -1,0 +1,16 @@
+Whack a mole:
+
+- user needs to be fast clicking
+- gameover: time or missed moles (ex. 5 moles)
+
+
+MVP:
+- grid & UI (html & css)
+- moles appearing & disappearing on grid (time + randomness + dom)
+- detect click (check if user has clicked on a mole)
+- score
+- timer (available time for user to play). Once expires, game over / redict.
+
+Bonus:
+- style
+- improve functionality (ex. different levels / ...
