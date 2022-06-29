@@ -1,57 +1,43 @@
+
+const holes = document.querySelectorAll(".hole");
 const displayTime = document.querySelector(".time");
 const displayScore = document.querySelector(".score");
-
-const hole = document.querySelectorAll(".hole");
+const startBtn = document.querySelector(".start");
 const mole = document.querySelector(".mole");
 
-let score;
-let currentTime;
-let hitPosition;
-let oneHit;
-let timerMole;
-let timerTime;
+let score = 0;
+let time = 60;
+let currentPos;
 
-function randomHole(){
-    hole.forEach(className => {
-        className.classList.remove("mole")
-    });
-    let randomPosition = hole[Math.floor(Math.random() * 9)];
-    randomPosition.classList.add('mole');
-
-    hitPosition = randomPosition.id;
-    oneHit = -1;
-}
-
-function countDown(){
-    currentTime--;
-    displayTime.textContent = currentTime;
-    if(currentTime === 0){
-        clearInterval(timerMole);
-        clearInterval(timerTime);
-    } 
-}    
-
-let initGame = () => {
-    score = 0;
-    clearInterval(timerMole);
-    clearInterval(timerTime);
-
-    currentTime = 60;
-    displayScore.textContent = 0;
-
-    timerMole = setInterval(randomHole, 500)
-    timerTime = setInterval(countDown, 1000)
-
-    hole.forEach(hole => {
-        hole.addEventListener("mouseup", () => {
-            if(hole.id === hitPosition & oneHit != hitPosition){
+holes.forEach(hole => {
+    hole.addEventListener("click", () => {
+        if(parseInt(hole.getAttribute("data-index")) === currentPos){
             score++;
-            displayScore = score;
-            oneHit = hitPosition
+            displayScore.innerHTML = score;
         }
-        })
     })
+});
+
+startBtn.addEventListener("click", start);
+
+function start(){
+    let startGame = setInterval(() => {
+        holes.forEach(hole => {
+            hole.innerHTML = "";
+        });
+
+        currentPos = Math.floor(Math.randome() * 9);
+        holes[currentPos].innerHTML = "mole";
+
+        time--;
+        displayTime.innerHTML = time;
+        if(time === 0){
+            clearInterval(startGame);
+            setTimeout(() => {
+                alert("Game Over!");
+            }, 100)
+        }
+
+    }, 1000);
 }
 
-
-    
