@@ -6,7 +6,7 @@ const startBtn = document.querySelector(".start");
 const mole = document.querySelector(".mole");
 
 let score = 0;
-let time = 60;
+let time = 30;
 let currentPos;
 
 holes.forEach(hole => {
@@ -26,7 +26,7 @@ function start(){
             hole.innerHTML = "";
         });
 
-        currentPos = Math.floor(Math.randome() * 9);
+        currentPos = Math.floor(Math.random() * 9);
         holes[currentPos].innerHTML = "mole";
 
         time--;
@@ -40,4 +40,5 @@ function start(){
 
     }, 1000);
 }
+
 

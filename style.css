@@ -7,6 +7,10 @@ body{
     justify-content: center;
 }
 .container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 30px 200px;
     justify-content: center;
 }
@@ -28,7 +32,7 @@ body{
 }
 .mole{
     background-color: red;
-    background-size: cover;
+    background-size: contain;
 
 }
 h1{
@@ -49,9 +53,9 @@ h2{
     text-align: center;
     font-size: 1rem;
 }
-.button {
-    box-align: center;
-    justify-content: center;
+.start{
+    margin-top: 10px;
+  
     padding: 10px 20px;
     width: 10%;
     border-color: solid black;
