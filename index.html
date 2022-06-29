@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css"></link>
+    <link rel="stylesheet" href="./css/main.css"></link>
     <title>Whack a Mole</title>
-    <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
-    <h1>Whack a Mole</h1>
-    <h2>Score:</h2>
-    <h2> class = "score" > 0</h2>
-    <div>Time</div>
-    <h2 class = "timeLeft"></h2>
-    <div class = "Start">
-        <button onClick = "startGame()">Start</button>
-    </div>
     
-    <h2></h2>
-    <h2></h2>
-    <div class = "game">
-        <div class = "hole" id = "0"></div>
-        <div class = "hole mole" id = "1"></div>
-        <div class = "hole" id = "2"></div>
-        <div class = "hole" id = "3"></div>
-        <div class = "hole" id = "4"></div>
-        <div class = "hole" id = "5"></div>
-        <div class = "hole" id = "6"></div>
-        <div class = "hole" id = "7"></div>
-        <div class = "hole" id = "8"></div>
+    <div class = "container">
+
+        <h1>Whack a Mole</h1>
+        
+        <h2>Time</h2>
+        <h2 class = "time">0</h2>
+        
+        <h2>Score:</h2>
+        <h2 class = "score">0</h2>
+       
+        <div class = "game">
+            <div class = "hole" id = "0"></div>
+            <div class = "hole mole" id = "1"></div>
+            <div class = "hole" id = "2"></div>
+            <div class = "hole" id = "3"></div>
+            <div class = "hole" id = "4"></div>
+            <div class = "hole" id = "5"></div>
+            <div class = "hole" id = "6"></div>
+            <div class = "hole" id = "7"></div>
+            <div class = "hole" id = "8"></div>
+        </div>
+
+        <button class = "initGame()">Start</button>
+
     </div>
 
-    <script type = "text/javascript"></script>
+    <script type = "./Whack-a-Mole/logic.js"></script>
    
 </body>
 </html>
