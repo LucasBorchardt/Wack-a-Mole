@@ -1,0 +1,20 @@
+body{
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;  
+    display: flex;
+}
+h1{
+    font-size: 90px;
+    text-align: center;
+    color: solid black;
+}
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: solid black;
+}
+.button{
+    padding: 10px 50px;
+   
+}

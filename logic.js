@@ -27,18 +27,21 @@ function start(){
         });
 
         currentPos = Math.floor(Math.random() * 9);
-        holes[currentPos].innerHTML = "mole";
+        holes[currentPos].innerHTML = '<img src="./img/Mole.png"/>';
 
         time--;
         displayTime.innerHTML = time;
         if(time === 0){
             clearInterval(startGame);
             setTimeout(() => {
-                alert("Game Over!");
+                if(score <= 15){
+                window.location.href = "./game-over--.html"
+            } else {window.location.href = "./game-over++.html"}
+
             }, 100)
         }
 
-    }, 1000);
+    }, 800);
 }
 
 
